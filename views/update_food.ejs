@@ -1,0 +1,74 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All foods</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Mise a jour Recette</h2>
+            <span class="text-light">Remplir le formulaire suivant pour mise ajour le Recette</span>
+        </div>
+
+        <!-- add food form -->
+         <!-- form handling -->
+ <form method="POST" id="update_food">
+    <div class="new_food">
+        <div class="form-group">
+            <label for="name" class="text-light">Food</label>
+            <input type="hidden" name="id" value="<%= food._id %>">
+            <input type="text" name="name" value="<%= food.name %>" placeholder="Mark Stoenis">
+        </div>
+        <div class="form-group">
+            <label for="recette" class="text-light">Composant</label>
+            <input type="text" name="recette" value="<%= food.recette%>" placeholder="example@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="taste" class="text-light">Type</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="taste" value="sucré" <%= food.taste == 'sucré' ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">sucré</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="taste" value="salé"  <%= food.taste == 'salé' ? 'checked' : '' %> >
+                <label for="radio-3" class="radio-label">salé</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="taste" value="sale"  <%= food.taste == 'sucré et salé' ? 'checked' : '' %> >
+                <label for="radio-3" class="radio-label">sucré/Salé</label>
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Extras</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Active" <%= food.status == 'Active' ? 'checked' : '' %> >
+                <label for="radio-4" class="radio-label">oui</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Inactive" <%= food.status == 'Inactive' ? 'checked' : '' %> >
+                <label for="radio-5" class="radio-label">non</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

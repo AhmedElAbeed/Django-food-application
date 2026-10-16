@@ -1,0 +1,28 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Recettes</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Nouvelle Recette</h2>
+            <span class="text-light">Remplir le formulaire pour ajouter un Recette</span>
+        </div>
+
+        <!-- add food form -->
+        <%- include('include/_form') %>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

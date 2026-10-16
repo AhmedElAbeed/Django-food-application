@@ -1,0 +1,46 @@
+ <!-- form handling -->
+ <form action="/api/foods" method="POST" id="add_food">
+    <div class="new_food">
+        <div class="form-group">
+            <label for="name" class="text-light">Food Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Food name here">
+        </div>
+        <div class="form-group">
+            <label for="recette" class="text-light">Recette</label>
+            <input type="text" name="recette" value="" placeholder="tomato/oeuf">
+        </div>
+        <div class="form-group">
+            <label for="taste" class="text-light">Sauces</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="taste" value="sucré" >
+                <label for="radio-2" class="radio-label">Sucrée</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="taste" value="salé" >
+                <label for="radio-3" class="radio-label">Salé</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="taste" value="sucré et salé" >
+                <label for="radio-4" class="radio-label">sucré/Salé</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Extras" class="text-light">Extras</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Active" >
+                <label for="radio-5" class="radio-label">Oui</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-6" name="status" value="Inactive" >
+                <label for="radio-6" class="radio-label">Non</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
